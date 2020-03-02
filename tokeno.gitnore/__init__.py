@@ -1,1 +1,0 @@
-tot = "NjgyMDc1ODcwMTA1Njk4NDMw.XlXu8g.3YdsJdntTPIrLYwY2d10XKGkE7g"
