@@ -84,4 +84,4 @@ async def on_message(message):
         else:
             await message.channel.send('오답입니다 삐빅')
 
-client.run()
+client.run(tk.tk)
