@@ -2,10 +2,8 @@ import discord
 import datetime
 import random
 from captcha.image import ImageCaptcha
-from bs4 import BeautifulSoup
-from urllib.request import urlopen
+import tokeno as tk
 
-soup = BeautifulSoup(response, 'html.parser')
 now = datetime.datetime.now()
 client = discord.Client()
 
@@ -86,6 +84,4 @@ async def on_message(message):
         else:
             await message.channel.send('오답입니다 삐빅')
 
-        
-
-client.run('NjgyMDc1ODcwMTA1Njk4NDMw.XlXu8g.3YdsJdntTPIrLYwY2d10XKGkE7g')
+client.run(tk.tot)
