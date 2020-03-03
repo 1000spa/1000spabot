@@ -9,7 +9,7 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Game("?!?help(DM) 아니면 ?!?help(CHANNEL)해보셈"))
+    await client.change_presence(status=discord.Status.online, activity=discord.Game("?!?help해보셈"))
     print('READY')
 
 @client.event
@@ -17,22 +17,31 @@ async def on_message(message):
     if message.author.bot:
         return None
 
+    if message.content == '?!?help':
+        await message.channel.send("'?!?help(DM)'이나 '?!?help(CHANNEL)'을 사용해야합니다!")
+
     if message.content == '?!?help(DM)':
         await message.channel.send('헬프치신분 DM 확인해주세요!')
 
-        embed = discord.Embed(colour = discord.Colour.red())
-        embed.set_author(name = "?!?help(DM)")
-        embed.add_field(name = "프리픽스",value = "제 프리픽스는 '?!?'입니다 삐빅",inline=False)
-        embed.add_field(name = "일반 명령어",value = "?!?help(DM), ?!?help(CHANNEL), ?!?천슾아유튜브, ?!?천슾아는?, ?!?지금시각, ?!?캡챠")
+        embed = discord.Embed(colour=discord.Colour.red())
+        embed.set_author(name='?!?help(DM)')
+        embed.add_field(name='?!?help(DM)', value='도움말을 DM으로 보냅니다.(send help message to DM.)', inline=False)
+        embed.add_field(name='?!?help(CHANNEL)', value='도움말을 채널에 보냅니다.(send help message at channel.)', inline=False)
+        embed.add_field(name='?!?천슾아유튜브', value="천슾아유튜브의 링크를 보냅니다.(send 1000spa's youtube link.)", inline=False)
+        embed.add_field(name='?!?천슾아는?', value="천슾아에 대한 정보를 알려줍니다.(send 1000spa's profiles.)", inline=False)
+        embed.add_field(name='?!?캡챠', value='캡챠를 플레이합니다.(play captcha.)')
         await message.author.send(embed=embed)
 
     if message.content == '?!?help(CHANNEL)':
         embed = discord.Embed(colour = discord.Colour.red())
-        embed.set_author(name = "?!?help(CHANNEL)")
-        embed.add_field(name = "프리픽스",value = "제 프리픽스는 '?!?'입니다 삐빅",inline=False)
-        embed.add_field(name = "일반 명령어",value = "?!?help(DM), ?!?help(CHANNEL), ?!?천슾아유튜브, ?!?천슾아는?, ?!?캡챠")
+        embed.set_author(name='?!?help(CHANNEL)')
+        embed.add_field(name='?!?help(DM)', value='도움말을 DM으로 보냅니다.(send help message to DM.)', inline=False)
+        embed.add_field(name='?!?help(CHANNEL)', value='도움말을 채널에 보냅니다.(send help message at channel.)', inline=False)
+        embed.add_field(name='?!?천슾아유튜브', value="천슾아유튜브의 링크를 보냅니다.(send 1000spa's youtube link.)", inline=False)
+        embed.add_field(name='?!?천슾아는?', value="천슾아에 대한 정보를 알려줍니다.(send 1000spa's profiles.)", inline=False)
+        embed.add_field(name='?!?캡챠', value='캡챠를 플레이합니다.(play captcha.)', inline=False)
         await message.channel.send(embed=embed)
-    
+
     if message.content == '?!?천슾아유튜브':
         await message.channel.send('천슾아유튜브 링크입니다 삐빅\nhttps://www.youtube.com/channel/UC8F-M2wolcAIisN55gwrwrw')
 
