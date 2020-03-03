@@ -30,7 +30,7 @@ async def on_message(message):
         embed = discord.Embed(colour = discord.Colour.red())
         embed.set_author(name = "?!?help(CHANNEL)")
         embed.add_field(name = "프리픽스",value = "제 프리픽스는 '?!?'입니다 삐빅",inline=False)
-        embed.add_field(name = "일반 명령어",value = "?!?help(DM), ?!?help(CHANNEL), ?!?천슾아유튜브, ?!?천슾아는?, ?!?지금시각, ?!?캡챠")
+        embed.add_field(name = "일반 명령어",value = "?!?help(DM), ?!?help(CHANNEL), ?!?천슾아유튜브, ?!?천슾아는?, ?!?캡챠")
         await message.channel.send(embed=embed)
     
     if message.content == '?!?천슾아유튜브':
@@ -58,9 +58,6 @@ async def on_message(message):
     if message.content == 'ㄴ인정':
         await message.channel.send('그래?')
 
-    if message.content == '?!?지금시각':
-        await message.channel.send("지금은 " + str(now.hour) + "시 " + str(now.minute) + "분 " + str(now.second) + "초 입니다.")
-
     if message.content == '?!?캡챠':
         Image_captcha = ImageCaptcha()
         a = ""
@@ -84,4 +81,4 @@ async def on_message(message):
         else:
             await message.channel.send('오답입니다 삐빅')
 
-client.run(tk.tk)
+client.run(tk.tok)
