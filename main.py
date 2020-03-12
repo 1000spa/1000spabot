@@ -2,11 +2,12 @@ import discord
 import requests
 import datetime
 import random
-from captcha.image import ImageCaptcha
+import captcha.image
 import tokeno as tk
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
-import corona as co
+import sys
+import os
 
 now = datetime.datetime.now()
 client = discord.Client()
@@ -98,7 +99,24 @@ async def on_message(message):
 
     if message.content.startswith("?!?코로나"):
 
-        co.call()
+        res = requests.get('https://coronamap.site/')
+        soup = BeautifulSoup(res.content, 'html.parser')
+        data1 = soup.findAll('div', 'content')
+        data2 = soup.findAll('div', 'content1 clear')
+
+        data1_list = []
+        data2_list = []
+        for item in data1:
+            data1_list.append(item.get_text().replace('\n', '').replace(' ', ''))
+        for item in data2:
+            data2_list.append(item.get_text().replace('\n', '').replace(' ', ''))
+
+        confirmedPatient = data1_list[0]
+        suspectedPatient = data1_list[1]
+
+        x = data2_list[0].find('사망')
+        curedPatient = data2_list[0][2:4]
+        diedPatient = data2_list[0][x + 2:]
 
         embed = discord.Embed(colour=discord.Colour.red())
         embed.set_author(name='코로나')
@@ -107,5 +125,11 @@ async def on_message(message):
         embed.add_field(name="격리 해제", value=curedPatient, inline="true")
         embed.add_field(name="사망자", value=diedPatient, inline="true")
         await message.channel.send(embed=embed)
+
+    if message.content == '?!?재시작':
+        await message.channel.send("재시작중임 좀만기다리셈")
+        os.system('clear')
+        os.system('python main.py')
+        os.execl(sys.executable, sys.executable, *sys.argv)
 
 client.run(tk.tok)
