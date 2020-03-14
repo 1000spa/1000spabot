@@ -47,6 +47,8 @@ async def on_message(message):
         embed.add_field(name=':question: ?!?천슾아는?:question:', value="천슾아에 대한 정보를 알려줍니다.(send 1000spa's profiles.)", inline=False)
         embed.add_field(name='?!?캡챠', value='캡챠를 플레이합니다.(play captcha.)', inline=False)
         embed.add_field(name='?!?코로나', value='코로나 19 현황을 보여줍니다.(send the status of COVID-19.)', inline=False)
+        embed.add_field(name='?!?재시작', value='이 봇을 재시작합니다.(restart this bot.)', inline=False)
+        embed.add_field(name='?!?따라해', value='메시지를 따라합니다.')
         await message.channel.send(embed=embed)
 
     if message.content == '?!?천슾아유튜브':
