@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0192e33b-d8a3-4e1b-a065-7b40712115cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/startbot.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/379775547838038028.png" beforeDir="false" afterPath="$PROJECT_DIR$/379775547838038028.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/540410908388753428.png" beforeDir="false" afterPath="$PROJECT_DIR$/540410908388753428.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../python/기본" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wetebot" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -138,17 +137,19 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="406" y="0" key="#main/0.0.1366.728@0.0.1366.728" timestamp="1582857368435" />
-    <state x="319" y="143" width="676" height="581" key="CommitChangelistDialog2" timestamp="1583134202087">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="299" y="134" width="676" height="581" key="CommitChangelistDialog2" timestamp="1585147417975">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="299" y="134" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585147417975" />
     <state x="319" y="143" width="676" height="581" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583134202087" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1583826140371">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1583826140371" />
-    <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1584094908834">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="-903" y="435" key="FileChooserDialogImpl" timestamp="1584519876993">
+      <screen x="-1366" y="313" width="1366" height="728" />
     </state>
+    <state x="-903" y="435" key="FileChooserDialogImpl/0.0.1280.680/-1366.313.1366.728@-1366.313.1366.728" timestamp="1584519876993" />
     <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584094908834" />
     <state width="1345" height="163" key="GridCell.Tab.0.bottom" timestamp="1584094836121">
       <screen x="0" y="0" width="1366" height="728" />
@@ -170,14 +171,19 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="530" y="285" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1583826127976" />
-    <state x="387" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1584094899121">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="363" y="178" key="com.intellij.ide.util.TipDialog" timestamp="1585098822521">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="363" y="178" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585098822521" />
     <state x="387" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584094899121" />
     <state x="489" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583244429096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="489" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1583244429096" />
+    <state x="-797" y="299" width="1034" height="714" maximized="true" key="dock-window-1" timestamp="1584518293956">
+      <screen x="-1366" y="313" width="1366" height="728" />
+    </state>
+    <state x="-797" y="299" width="1034" height="714" maximized="true" key="dock-window-1/0.0.1280.680/-1366.313.1366.728@-1366.313.1366.728" timestamp="1584518293956" />
     <state x="346" y="49" key="search.everywhere.popup" timestamp="1583242912978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
