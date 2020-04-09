@@ -1,4 +1,4 @@
-import discord
+﻿import discord
 import requests
 import datetime
 import random
@@ -7,6 +7,7 @@ import tokeno as tk
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import sys
+import asyncio
 import os
 
 now = datetime.datetime.now()
@@ -35,7 +36,8 @@ async def on_message(message):
         embed.add_field(name='?!?천슾아유튜브', value="천슾아유튜브의 링크를 보냅니다.(send 1000spa's youtube link.)", inline=False)
         embed.add_field(name='?!?천슾아는?', value="천슾아에 대한 정보를 알려줍니다.(send 1000spa's profiles.)", inline=False)
         embed.add_field(name='?!?캡챠', value='캡챠를 플레이합니다.(play captcha.)')
-        embed.add_field(name='?!?코로나', value='코로나 19 현황을 보여줍니다.(send the status of COVID-19.)', inline=False)
+        embed.add_field(name='?!?오늘게임', value='오늘 게임을 하면 잘 풀릴지 안 풀릴지 알려줍니다.', inline=False)
+        embed.add_field(name='?!?귀여운거', value='귀여운 사진을 1번에서 5번까지 랜덤하게 보내줍니다.', inline=False)
         await message.author.send(embed=embed)
 
     if message.content == '?!?help(CHANNEL)':
@@ -46,9 +48,9 @@ async def on_message(message):
         embed.add_field(name='?!?천슾아유튜브', value="천슾아유튜브의 링크를 보냅니다.(send 1000spa's youtube link.)", inline=False)
         embed.add_field(name=':question: ?!?천슾아는?:question:', value="천슾아에 대한 정보를 알려줍니다.(send 1000spa's profiles.)", inline=False)
         embed.add_field(name='?!?캡챠', value='캡챠를 플레이합니다.(play captcha.)', inline=False)
-        embed.add_field(name='?!?코로나', value='코로나 19 현황을 보여줍니다.(send the status of COVID-19.)', inline=False)
         embed.add_field(name='?!?재시작', value='이 봇을 재시작합니다.(restart this bot.)', inline=False)
         embed.add_field(name='?!?오늘게임', value='오늘 게임을 하면 잘 풀릴지 안 풀릴지 알려줍니다.', inline=False)
+        embed.add_field(name='?!?귀여운거', value='귀여운 사진을 1번에서 5번까지 랜덤하게 보내줍니다.', inline=False)
         await message.channel.send(embed=embed)
 
     if message.content == '?!?천슾아유튜브':
@@ -57,22 +59,22 @@ async def on_message(message):
     if message.content == '?!?천슾아는?':
         await message.channel.send('음......')
         await message.channel.send('일단 착함\nㅇㅈ?')
-    
+
     if message.content == 'ㅇㅈ':
         await message.channel.send('ㅇㅇ')
 
     if message.content == '인정':
         await message.channel.send('ㅇㅇ')
-    
+
     if message.content == '노인정':
         await message.channel.send('그래?')
 
     if message.content == 'ㄴㅇㅈ':
         await message.channel.send('그래?')
-    
+
     if message.content == '노ㅇㅈ':
         await message.channel.send('그래?')
-    
+
     if message.content == 'ㄴ인정':
         await message.channel.send('그래?')
 
@@ -99,35 +101,6 @@ async def on_message(message):
         else:
             await message.channel.send('오답입니다 삐빅')
 
-    if message.content.startswith("?!?코로나"):
-
-        res = requests.get('https://coronamap.site/')
-        soup = BeautifulSoup(res.content, 'html.parser')
-        data1 = soup.findAll('div', 'content')
-        data2 = soup.findAll('div', 'content1 clear')
-
-        data1_list = []
-        data2_list = []
-        for item in data1:
-            data1_list.append(item.get_text().replace('\n', '').replace(' ', ''))
-        for item in data2:
-            data2_list.append(item.get_text().replace('\n', '').replace(' ', ''))
-
-        confirmedPatient = data1_list[0]
-        suspectedPatient = data1_list[1]
-
-        x = data2_list[0].find('사망')
-        curedPatient = data2_list[0][2:4]
-        diedPatient = data2_list[0][x + 2:]
-
-        embed = discord.Embed(colour=discord.Colour.red())
-        embed.set_author(name='코로나')
-        embed.add_field(name="확진자", value=confirmedPatient, inline="true")
-        embed.add_field(name='의심 환자', value=suspectedPatient, inline="true")
-        embed.add_field(name="격리 해제", value=curedPatient, inline="true")
-        embed.add_field(name="사망자", value=diedPatient, inline="true")
-        await message.channel.send(embed=embed)
-
     if message.content == '?!?재시작':
         await message.channel.send("재시작중임 좀만기다리셈")
         os.system('clear')
@@ -137,5 +110,35 @@ async def on_message(message):
     if message.content == '?!?오늘게임':
         menu = '망한다', '잘될거야', '흠.....잘해봐라'
         await message.channel.send(random.choice(menu))
+
+    if message.content == '?!?귀여운거':
+        image = 1, 2, 3, 4, 5
+        embed = discord.Embed(colour=discord.Colour.green())
+        choice = random.choice(image)
+
+        if choice == 1:
+            embed.set_author(name='아유 귀여웡')
+            embed.set_image(url="https://cdn.discordapp.com/attachments/697389745055203398/697393147856289832/1.jpg")
+            await message.channel.send(embed=embed)
+
+        if choice == 2:
+            embed.set_author(name='아유 귀여웡')
+            embed.set_image(url="https://cdn.discordapp.com/attachments/697389745055203398/697393160267104318/2.jpg")
+            await message.channel.send(embed=embed)
+
+        if choice == 3:
+            embed.set_author(name='아유 귀여웡')
+            embed.set_image(url="https://cdn.discordapp.com/attachments/697389745055203398/697393162221781002/3.jpg")
+            await message.channel.send(embed=embed)
+
+        if choice == 4:
+            embed.set_author(name='아유 귀여웡')
+            embed.set_image(url="https://cdn.discordapp.com/attachments/697389745055203398/697393162221781002/3.jpg")
+            await message.channel.send(embed=embed)
+
+        if choice == 5:
+            embed.set_author(name='아유 귀여웡')
+            embed.set_image(url="https://cdn.discordapp.com/attachments/697389745055203398/697393220010639421/5.jpg")
+            await message.channel.send(embed=embed)
 
 client.run(tk.tok)
