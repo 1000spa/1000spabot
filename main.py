@@ -1,16 +1,12 @@
 ﻿import discord
 import requests
-import datetime
 import random
 import captcha.image
 import tokeno as tk
-from bs4 import BeautifulSoup
-from urllib.request import urlopen
 import sys
 import asyncio
 import os
 
-now = datetime.datetime.now()
 client = discord.Client()
 
 @client.event
@@ -39,6 +35,7 @@ async def on_message(message):
         embed.add_field(name='?!?캡챠', value='캡챠를 플레이합니다.(play captcha.)')
         embed.add_field(name='?!?오늘게임', value='오늘 게임을 하면 잘 풀릴지 안 풀릴지 알려줍니다.', inline=False)
         embed.add_field(name='?!?귀여운거', value='귀여운 사진을 1번에서 5번까지 랜덤하게 보내줍니다.', inline=False)
+        embed.add_field(name='?!?따라해', value='?!?따라해 뒷부분을 따라 말해줍니다.')
         await message.author.send(embed=embed)
 
     if message.content == '?!?help(CHANNEL)':
@@ -47,12 +44,12 @@ async def on_message(message):
         embed.add_field(name='?!?help(DM)', value='도움말을 DM으로 보냅니다.(send help message to DM.)', inline=False)
         embed.add_field(name='?!?help(CHANNEL)', value='도움말을 채널에 보냅니다.(send help message at channel.)', inline=False)
         embed.add_field(name='?!?천슾아유튜브', value="천슾아유튜브의 링크를 보냅니다.(send 1000spa's youtube link.)", inline=False)
-        embed.add_field(name=':question: ?!?천슾아는?:question:', value="천슾아에 대한 정보를 알려줍니다.(send 1000spa's profiles.)",
-                        inline=False)
+        embed.add_field(name=':question: ?!?천슾아는?:question:', value="천슾아에 대한 정보를 알려줍니다.(send 1000spa's profiles.)", inline=False)
         embed.add_field(name='?!?캡챠', value='캡챠를 플레이합니다.(play captcha.)', inline=False)
         embed.add_field(name='?!?재시작', value='이 봇을 재시작합니다.(restart this bot.)', inline=False)
         embed.add_field(name='?!?오늘게임', value='오늘 게임을 하면 잘 풀릴지 안 풀릴지 알려줍니다.', inline=False)
         embed.add_field(name='?!?귀여운거', value='귀여운 사진을 1번에서 5번까지 랜덤하게 보내줍니다.', inline=False)
+        embed.add_field(name='?!?따라해', value='?!?따라해 뒷부분을 따라 말해줍니다.')
         await message.channel.send(embed=embed)
 
     if message.content == '?!?천슾아유튜브':
