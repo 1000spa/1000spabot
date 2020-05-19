@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0192e33b-d8a3-4e1b-a065-7b40712115cd" name="Default Changelist" comment="token = tot">
+      <change afterPath="$PROJECT_DIR$/534957765462982667.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/540410908388753428.png" beforeDir="false" afterPath="$PROJECT_DIR$/540410908388753428.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,10 +173,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="530" y="285" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1583826127976" />
-    <state x="363" y="178" key="com.intellij.ide.util.TipDialog" timestamp="1586339845564">
+    <state x="363" y="178" key="com.intellij.ide.util.TipDialog" timestamp="1589593457557">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="363" y="178" key="com.intellij.ide.util.TipDialog/0.0.1280.680/-1366.313.1366.728@0.0.1280.680" timestamp="1586339845564" />
+    <state x="-979" y="504" key="com.intellij.ide.util.TipDialog/0.0.1280.680/-1366.313.1366.728@-1366.313.1366.728" timestamp="1586762667916" />
+    <state x="363" y="178" key="com.intellij.ide.util.TipDialog/0.0.1280.680/-1366.313.1366.728@0.0.1280.680" timestamp="1587355712686" />
+    <state x="-1375" y="272" key="com.intellij.ide.util.TipDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589517125124" />
+    <state x="363" y="178" key="com.intellij.ide.util.TipDialog/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1589593457557" />
     <state x="363" y="178" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585565373978" />
     <state x="387" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584094899121" />
     <state x="489" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583244429096">
