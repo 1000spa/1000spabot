@@ -143,7 +143,7 @@ async def on_message(message):
 
     if message.content.startswith("?!?따라해"):
         msg = message.content[7:]
-        message.channel.purge(limit=1)
+        await message.channel.purge(limit=1)
         await message.channel.send(msg)
 
 client.run(tk.tok)
