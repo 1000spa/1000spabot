@@ -102,6 +102,7 @@ async def on_message(message):
             await message.channel.send('오답입니다 삐빅')
 
     if message.content == '?!?재시작':
+        await message.channel.purge(limit=1)
         await message.channel.send("재시작중임 좀만기다리셈")
         os.system('clear')
         os.system('python main.py')
@@ -144,6 +145,6 @@ async def on_message(message):
     if message.content.startswith("?!?따라해"):
         msg = message.content[7:]
         await message.channel.purge(limit=1)
-        await message.channel.send(msg)
+        await message.channel.send(message.author.name + ": " + msg)
 
 client.run(tk.tok)
